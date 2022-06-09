@@ -1,0 +1,35 @@
+
+<body>
+
+    <div class="fixed-header mt-5">
+      <button type="button" class="btn btn-info d-block mr-0 ml-auto">
+        <a href="">BACK</a>
+
+      </button>
+      <b>FIND RESULT</b><br>
+      <label *ngIf="error" style="color: red;">WRONG CREDENTIALS</label>
+      
+    </div>
+    
+
+    <form [formGroup]="studentLogin" (ngSubmit)="login()" class="border border-warning mt-4 shadow-lg p-4 mb-4 bg-white">
+      <div class="row mb-3 mt-5">
+        
+        <label for="name" class="col-sm-2 col-form-label " >Name</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" id="name" name="name" formControlName="name" >
+        </div>
+        <span class="error" *ngIf="name?.invalid && name?.touched">Name is required</span>
+      </div>
+      <div class="row mb-3 mt-3">
+        
+        <label for="rollnumber" class="col-sm-2 col-form-label " >RollNo.</label>
+        <div class="col-sm-10">
+          <input type="rollnumber" class="form-control" id="rollnumber" name="rollno"  formControlName="rollno" >
+        </div>
+        <span class="error" *ngIf="rollno?.invalid && rollno?.touched">Rollno is required</span>
+      </div>
+      <button type="submit" [disabled]="studentLogin.invalid" class="btn btn-success">SEARCH</button>
+      <button type="reset" class="btn btn-info">CLEAR</button>
+    </form>
+</body>

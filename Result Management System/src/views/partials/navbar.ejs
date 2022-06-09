@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/">Result Management System</a>
+
+    <div>
+      <% if (logout=="true" ){ %>
+
+
+        <button type="button" class="btn btn-info">
+          <a href="/">LOGOUT</a>
+
+        </button>
+        <%}%>
+    </div>
+  </div>
+
+</nav>
+
+<div>
+  <% if (back=="studentLogin" ||back=="teacherLogin" ){ %>
+
+
+    <button type="button" class="btn btn-info d-block mr-0 ml-auto">
+      <a href="/">BACK</a>
+
+    </button>
+    <%}%>
+    <% if (back=="edit" ||back=="addStudent"){ %>
+
+      
+      <button type="button" class="btn btn-info d-block mr-0 ml-auto">
+        <a href="/viewall">BACK</a>
+
+      </button>
+      <%}%>
+
+
+        <% if (back=="viewResult" ){ %>
+
+
+          <button type="button" class="btn btn-info d-block mr-0 ml-auto">
+            <a href="/studentLogin">BACK</a>
+
+          </button>
+          <%}%>
+</div>

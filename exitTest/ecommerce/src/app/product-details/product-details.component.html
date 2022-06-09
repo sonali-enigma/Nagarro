@@ -1,0 +1,33 @@
+
+ <button type="button" (click)="back()" class="btn btn-info " style="position: absolute; left: 0;">
+    Back
+
+</button>
+<div class="container py-4 my-4 mx-auto d-flex flex-column">
+    
+    <div class="header">
+        <div class="row r1">
+            <div class="col-md-9 abc">
+               
+                <h1>{{products.name}}</h1>
+            </div>
+            <div class="col-md-7"> <img src="{{products.image}}" width="500px" height="500px"> </div>
+
+            <div class="col-md-5 p-0 klo">
+                <h4>BRAND: {{products.brand}}</h4>
+                <h4>PRICE: Rs.{{products.price}}</h4>
+                <h4>CODE: {{products.code}}</h4>
+                <h5>{{products.description}}</h5>
+            
+                <form [formGroup]="pincode" (ngSubmit)="Pcode()" class="form-horizontal " >
+                    <input class="form-control" type="pincode" placeholder="Enter Pincode" id="pincode"
+                                    name="pincode" formControlName="Pincode" >
+                           
+                            <button  class="btn signin btn btn-info" [disabled]="pincode.invalid" >Check Delivery</button>
+                            <span *ngIf="yes"> Available 😀</span>
+                            <span *ngIf="no"> Not Available 😔</span><br>
+                            <span *ngIf="yes">Delivery in {{days}}days</span>
+                        </form>
+            </div>
+        </div>
+    </div>

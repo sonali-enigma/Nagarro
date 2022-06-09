@@ -1,0 +1,46 @@
+
+<body>
+  <div ><button type="button" (click)="logout()" class="btn btn-info " style="position: absolute; right: 0;">
+    LOGOUT
+
+  </button></div>
+    <div class="fixed-header mt-5">
+      <button type="button" class="btn btn-info d-block mr-0 ml-auto">
+        <a href="/viewall">BACK</a>
+
+      </button>
+      <b> EDIT RESULT</b>
+      
+    </div>
+    <form [formGroup]="editResult" (ngSubmit)="edit()" class="border border-warning mt-4 shadow-lg p-4 mb-4 bg-white">
+      <div class="row mb-3 mt-5">
+        <label for="rollno" class="col-sm-2 col-form-label ">RollNo.</label>
+        <div class="col-sm-10">
+          <input type="rollno" class="form-control" id="rollno" name="rollno" formControlName="rollno" 
+            readonly>
+        </div>
+      </div>
+      <div class="row mb-3 mt-5">
+        <label for="name" class="col-sm-2 col-form-label ">NAME</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" id="name" name="name" formControlName="name"  >
+        </div>
+      </div>
+      <div class="row mb-3 mt-5">
+        <label for="dob" class="col-sm-2 col-form-label ">DATE OF BIRTH</label>
+        <div class="col-sm-10">
+          <input type="dob" class="form-control" placeholder="dd.mm.yyyy" id="dob" name="dob"  formControlName="dob" >
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <label for="score" class="col-sm-2 col-form-label ">SCORE</label>
+        <div class="col-sm-10">
+          <input type="score" class="form-control" id="score" name="score"  formControlName="score">
+        </div>
+      </div>
+
+      <button type="submit"  [disabled]="editResult.invalid"class="btn btn-success">EDIT</button>
+
+    </form>
+</body>
+

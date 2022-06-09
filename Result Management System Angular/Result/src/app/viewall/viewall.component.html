@@ -1,0 +1,44 @@
+
+<body>
+  
+  <div ><button type="button" (click)="logout()" class="btn btn-info " style="position: absolute; right: 0;">
+    LOGOUT
+
+  </button></div>
+    <div class="fixed-header mt-5" >
+       
+        <b> ALL STUDENTS</b><br>
+        
+        <button type="button" class="btn btn-info">
+            <a href="/addstudent">ADD RESULT</a></button>
+        
+        
+        <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Roll No.</th>
+                <th scope="col">Name</th>       
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Score</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of collection">
+                  <td>{{item.rollno}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.dob}}</td>
+                  <td>{{item.score}}</td>
+                  <td>
+                    <a href="/edit/{{item.rollno}}"><img style="margin: 0px 5px;" src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
+                    <img style="margin: 0px 5px;"  (click)="delete(item.rollno)" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
+                  </td>
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+     
+</body>
+
+
+ 

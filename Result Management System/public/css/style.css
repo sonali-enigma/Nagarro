@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+form {
+    display: inline-block;
+}
+  .navbar{
+    background-color: rgb(145, 219, 176);
+    margin-left: -10px;    
+  }
+  .navbar-brand{
+   color: black ;
+   font-weight: bold;
+   margin-left: 40%;
+  }
+  
+  

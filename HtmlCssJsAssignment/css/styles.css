@@ -1,0 +1,125 @@
+.fixed-header{
+    width: 100%;
+    position: fixed;        
+    background-color:rgb(34, 214, 169);
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background-color:rgb(34, 214, 169);
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+}
+.table-head{
+    border:1px solid #4d6613;
+    text-align: center;
+    background-color: #94c91a;
+    color: #fff;
+    font-weight: 700;
+  }
+  .student-detail{
+    border: 1px solid #94c91a;
+    margin-left: 0;
+    background-color: #ffffff;
+   
+   
+  }
+  .inside-table{
+    height: 285px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  p{
+    margin-bottom: 4px;
+  }
+
+  .vr{
+    height: 500px;
+    margin-top: 7%;
+    background-color: rgb(34, 214, 169);
+    margin-left: 7%;
+    margin-right: 3%;
+    padding: 0 2px;
+  }
+  
+  
+  hr {
+    margin-top: 12rem;
+    margin-left:  5rem;
+    margin-right: 5rem;
+   
+    border: 0;
+    border-top: 5px solid rgb(34, 214, 169);
+  }
+  
+  .fade-in{
+    animation: fadeIn 5s;
+
+  }
+  @keyframes fadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+ 
+  .title {
+    font-family: "Montserrat";
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 1px;
+  }
+   
+  h1 {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: .75;
+    margin: 10px 0;
+  }
+  /* styling my button */
+   
+  .white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #FFF;
+    transition: .35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-family: "Montserrat";
+  }
+   
+  .white-mode:hover {
+    background-color: #FFF;
+    color: #122;
+  }
+   
+  
+  

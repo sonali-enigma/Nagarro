@@ -1,0 +1,29 @@
+
+pipeline{
+    agent any
+         tools{
+              maven 'maven'
+              jdk 'jdk-11'
+               }
+     stages{
+          stage('git' ){
+            steps{
+            git credentialsId:'gitlab',url:'https://git.nagarro.com/GITG00641/Java/sonali-prajapati.git'
+                 }
+            }
+          stage('build'){
+            steps{
+            bat 'mvn -f  App1Assignment5/pom.xml clean install'
+                 }
+            }
+
+          stage('code quality'){
+            steps{
+            withSonarQubeEnv('sonarQube'){
+            bat 'mvn -f App1Assignment5/pom.xml sonar:sonar'
+                 }
+           }
+         }
+     }
+}
+    
